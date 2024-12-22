@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur de Paroles et Accords</title>
+    <!-- Ajout de PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+    <link rel="stylesheet" href="SITEFREDO.css">
+</head>
+<body> 
+    <div class="container">
+        <h1>Lecteur interactif de Paroles et Accords</h1>
+        <textarea id="text-input" placeholder="Collez ici vos paroles avec accords..."></textarea>
+        <div class="controls">
+            <label for="speed">Vitesse de défilement :</label>
+            <input type="range" id="speed" min="1" max="10" value="5">
+            <span id="speed-display">5</span>
+        </div>
+        <div class="buttons">
+            <button id="start-btn">Commencer</button>
+            <button id="stop-btn">Arrêter</button>
+            <button id="import-btn">Importer un PDF</button>
+            <input type="file" id="file-input" accept=".pdf, .txt" style="display: none;">
+        </div>
+        <div class="viewer">
+            <div id="text-viewer"></div>
+        </div>
+        <div class="audio-controls">
+            <button id="import-audio-btn">Importer une musique</button>
+            <input type="file" id="audio-input" accept="audio/*" style="display: none;">
+            <audio id="audio-player" controls style="width: 100%; display: none;"></audio>
+        </div>
+    </div>
+    <script src="SITEFREDO.js"></script>
+</body>
+</html>
